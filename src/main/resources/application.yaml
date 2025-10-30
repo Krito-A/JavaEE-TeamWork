@@ -1,6 +1,9 @@
 server:
   port: 8080
 spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
   application:
     name: javaee
   datasource:
@@ -30,3 +33,22 @@ spring:
           starttls:
             enable: true
             required: true
+knife4j:
+  enable: true
+  openapi:
+    title: JavaEE-TeamWork接口测试文档
+    description: knife4j测试文档
+    # aaa"
+    email: xiaoymin@foxmail.com
+    concat: 八一菜刀
+    url: https://docs.xiaominfo.com
+    version: v4.0
+    license: Apache 2.0
+    license-url: https://stackoverflow.com/
+    terms-of-service-url: https://stackoverflow.com/
+    group:
+      test1:
+        group-name: Work1
+        api-rule: package
+        api-rule-resources:
+          - com.team.controller
